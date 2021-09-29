@@ -1,4 +1,4 @@
-
+print("https://github.com/GDavid-JS/PL-grigorian")
 a = int(input("Введите число А "))
 b = int(input("Введите число Б "))
 
