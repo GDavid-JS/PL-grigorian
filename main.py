@@ -1,96 +1,112 @@
-print("https://github.com/GDavid-JS/PL-grigorian")
-a = int(input("Введите число А "))
-b = int(input("Введите число Б "))
+print("Первый вариант")
+string = input("Введите строку(русский язык): ");
+string_arr = string.split(' ')
+j = 0
+for i in string_arr:
+    if i[0] == 'е':
+        j+=1
+print(j)
 
-#Первая задача
-for i in range(a, b+1):
-   print(i)
+print("Второй вариант")
+string = input("Введите строку(любой язык): ");
+j = 0
+for i in range(0, len(string)):
+    if string[i] == ':':
+        j+=1
+string = string.replace(':', '%')
+print(string, "\nКол-во замен: " + str(j))
 
+print("Третий вариант")
+string = input("Введите строку(любой язык): ");
+j = 0
+for i in range(0, len(string)):
+    if string[i] == '.':
+        j+=1
+string = string.replace(".", "")
+print(string, "\nКол-во удаленных символов: " + str(j))
 
-#Вторая задача
-a = int(input("Введите число А "))
-b = int(input("Введите число Б "))
-i = a
-if a < b:
-    while i<=b:
+print("Четвертый вариант")
+string = input("Введите строку(русский язык): ");
+j = 0
+
+for i in range(0, len(string)):
+    if string[i] == 'а':
+        j+=1
+
+string = string.replace('а', 'о')
+print(string,"\n" + str(len(string)), "\nКол-во замен = " + str(j))
+
+print("Пятый вариант")
+print(input("Введите строку(любой язык): ").lower())
+
+print("Шестой вариант")
+string = input("Введите строку(русский язык): ");
+j = 0
+for i in range(0, len(string)):
+    if string[i] == 'а':
+        j+=1
+string = string.replace("а", "")
+print(string, "\nКол-во удаленных символов: " + str(j))
+
+####
+print("Седьмой вариант")
+print("Может работать только с четным количеством символов по объективным причинам")
+string = input("Введите строку(русский язык): ");
+newstring = ""
+j = int(len(string)/2)
+for i in range(0, j): newstring += string[i]
+print(string.replace(string[:j], newstring.replace('п', '*')))
+
+print("Восьмой ваниант")
+print(len(input("Введите строку(любой язык): ").split()))
+
+print("Девятый ваниант")
+string1 = input("Введите строку: ");
+string2 = input("Введите слово: ");
+j = 0
+for i in string1.split():
+    if i == string2:
+        j += 1
+print(j)
+
+print("Десятый ваниант")
+array = input("Введите строку(английский язык): ").split()
+for i in range(0, len(array)): array[i] = array[i].replace(array[i][0], array[i][0].upper(), 1)
+print(" ".join(array))
+
+print("Одинаддцатый ваниант")
+string = input("Введите строку(русский язык): ")
+
+iterator = 1
+max = 0
+for i in range(1, len(string)):
+    if string[i] == string[i-1] == 'н':
+        iterator += 1
+        if iterator > max:
+            max = iterator
+    else:
+        iterator = 1
+print(max)
+print(string.replace(".", "!"))
+
+print("Двенадцатый ваниант")
+
+for i in input("Введите строку(русский язык): ").split(" "):
+    if i[len(i)-1] == 'я':
         print(i)
-        i+=1
-else:
-    while i >= b:
-        print(i)
-        i -= 1
 
-#Третья задача
-a = int(input("Введите число А "))
-i = a
-while i > b:
-    i -=1
-    if i % 2 == 1:
+print("Тринадацатый ваниант")
+string = input("Введите строку(любой язык): ")
+print(string[string.find('(') + 1:string.find(')')])
+
+print("Четырнадцатый ваниант")
+for i in input("Введите строку(русский язык): ").split(" "):
+    if i[len(i)-1] == 'я' or i[0] == 'а' :
         print(i)
 
-#Четвертая задача
-N = int(input("Введите число N "))
-sum = 0
-for i in range(0, N):
-    sum += int(input("Введите число: "))
-print(sum)
-
-#Пятая задача
-n = int(input("Введите число n "))
-sum = 0
-for i in range(1, n + 1):
-   sum += i**3
-print(sum)
-
-#Шестая задача
-n = int(input("Введите число n: "))
-mulplication = 1;
-for i in range(1, n+1):
-    mulplication*=i
-print(mulplication)
-
-#седьмая задача
-n = int(input("Введите число n: "))
-multiplication = 1
-sum = 0
-for i in range(1, n+1):
-    multiplication*= i
-    sum += multiplication
-print(a)
-
-#восьмая задача
-n = int(input("Введите число n: "))
-for i in range(1, n+1):
-    for j in range(1,i+1):
-        print(j, end = "")
-    print("\n")
-
-#девятая задача
-n = int(input("Введите число N: "))
-f1 = 0
-f2 = 1
-f3 = 0
-i = 0
-while i < n-2:
-    fSum = f1 + f2
-    f1 = f2
-    f2 = fSum
-    f3 += fSum
-    i +=1
-print(f3+1)
-
-#десятая задача
-a = int(input("Введите число а: "))
-b = int(input("Введите число б: "))
-f1 = 0
-f2 = 1
-f3 = 0
-i = 0
-while i < a-1:
-    fSum = f1 + f2
-    f1 = f2
-    f2 = fSum
-    i += 1
-    if i >= b:
-        f3 += fSum
-print(f3)
+print("Пятнадцатый ваниант")
+iterator = 0
+for i in input("Введите строку(русский язык): "):
+    if i == 'т':
+        iterator += 1
+print(iterator)
