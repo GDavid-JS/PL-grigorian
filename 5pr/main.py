@@ -57,10 +57,10 @@ j = int(len(string)/2)
 for i in range(0, j): newstring += string[i]
 print(string.replace(string[:j], newstring.replace('п', '*')))
 
-print("Восьмой ваниант")
+print("Восьмой вариант")
 print(len(input("Введите строку(любой язык): ").split()))
 
-print("Девятый ваниант")
+print("Девятый вариант")
 string1 = input("Введите строку: ");
 string2 = input("Введите слово: ");
 j = 0
@@ -69,12 +69,12 @@ for i in string1.split():
         j += 1
 print(j)
 
-print("Десятый ваниант")
+print("Десятый вариант")
 array = input("Введите строку(английский язык): ").split()
 for i in range(0, len(array)): array[i] = array[i].replace(array[i][0], array[i][0].upper(), 1)
 print(" ".join(array))
 
-print("Одинаддцатый ваниант")
+print("Одинаддцатый вариант")
 string = input("Введите строку(русский язык): ")
 
 iterator = 1
@@ -89,22 +89,22 @@ for i in range(1, len(string)):
 print(max)
 print(string.replace(".", "!"))
 
-print("Двенадцатый ваниант")
+print("Двенадцатый вариант")
 
 for i in input("Введите строку(русский язык): ").split(" "):
     if i[len(i)-1] == 'я':
         print(i)
 
-print("Тринадацатый ваниант")
+print("Тринадацатый вариант")
 string = input("Введите строку(любой язык): ")
 print(string[string.find('(') + 1:string.find(')')])
 
-print("Четырнадцатый ваниант")
+print("Четырнадцатый вариант")
 for i in input("Введите строку(русский язык): ").split(" "):
     if i[len(i)-1] == 'я' or i[0] == 'а' :
         print(i)
 
-print("Пятнадцатый ваниант")
+print("Пятнадцатый вариант")
 iterator = 0
 for i in input("Введите строку(русский язык): "):
     if i == 'т':
