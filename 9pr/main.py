@@ -4,7 +4,7 @@ array = []
 
 for line in file:
     arr = []
-    string = line.strip().replace(" ", "")
+    string = line.strip().split(" ")
     for i in string:
         arr.append(int(i))
     array.append(arr)
